@@ -10,7 +10,234 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/booking.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"
+          ><i class="fas fa-graduation-cap me-2"></i>UniEvents</a
+        >
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Browse Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="booking.html">Host Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact US</a>
+            </li>
+          </ul>
+          <div class="ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm me-2"
+              >Log In</a
+            >
+            <a href="signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN FORM CONTAINER -->
+    <div class="container">
+      <div class="booking-container">
+        <!-- Form Header -->
+        <div class="form-header">
+          <h2>
+            <i class="fas fa-calendar-plus me-2"></i>Venue Booking Request
+          </h2>
+          <p class="mb-0">
+            Club Representatives use this form to request a room.
+          </p>
+        </div>
+
+        <!-- The Form -->
+        <div class="p-5">
+          <form id="bookingForm" onsubmit="submitBooking(event)">
+            <!-- SECTION 1: Event Details -->
+            <h5 class="form-section-title">1. Event Details</h5>
+            <div class="mb-3">
+              <label for="eventTitle" class="form-label"
+                >Event Title <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="eventTitle"
+                placeholder="e.g., Annual Robotics Workshop"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="eventDesc" class="form-label">Description</label>
+              <textarea
+                class="form-control"
+                id="eventDesc"
+                rows="3"
+                placeholder="Briefly describe the event purpose..."
+              ></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="organizer" class="form-label"
+                  >Organizing Club</label
+                >
+                <select class="form-select" id="organizer">
+                  <option selected>Computer Science Club</option>
+                  <option>Engineering Society</option>
+                  <option>Music Club</option>
+                  <option>Debate Team</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="attendees" class="form-label"
+                  >Expected Attendees <span class="text-danger">*</span></label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="attendees"
+                  placeholder="e.g., 50"
+                  min="1"
+                  required
+                />
+                <div class="form-text">Used to validate room capacity.</div>
+              </div>
+            </div>
+
+            <!-- SECTION 2: Logistics & Venue -->
+            <h5 class="form-section-title mt-4">2. Logistics & Venue</h5>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="eventDate" class="form-label"
+                  >Date <span class="text-danger">*</span></label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="eventDate"
+                  required
+                />
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="startTime" class="form-label">Start Time</label>
+                <input
+                  type="time"
+                  class="form-control"
+                  id="startTime"
+                  required
+                />
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="endTime" class="form-label">End Time</label>
+                <input type="time" class="form-control" id="endTime" required />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="venueSelect" class="form-label"
+                >Preferred Venue <span class="text-danger">*</span></label
+              >
+              <select class="form-select" id="venueSelect" required>
+                <option value="" disabled selected>Choose a room...</option>
+                <option value="main_auditorium">
+                  Main Auditorium (Cap: 500)
+                </option>
+                <option value="lecture_hall_a">
+                  Lecture Hall A (Cap: 200)
+                </option>
+                <option value="conf_room_1">Conference Room 1 (Cap: 50)</option>
+                <option value="lab_3">Computer Lab 3 (Cap: 30)</option>
+              </select>
+            </div>
+
+            <!-- SECTION 3: Resources -->
+            <h5 class="form-section-title mt-4">3. Equipment & Resources</h5>
+            <div class="mb-3">
+              <label class="form-label d-block">Check all that apply:</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="equipProjector"
+                  value="projector"
+                />
+                <label class="form-check-label" for="equipProjector"
+                  >Projector</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="equipMic"
+                  value="mic"
+                />
+                <label class="form-check-label" for="equipMic"
+                  >Microphone/Sound</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="equipWifi"
+                  value="wifi"
+                />
+                <label class="form-check-label" for="equipWifi"
+                  >Guest Wi-Fi Access</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="equipCatering"
+                  value="catering"
+                />
+                <label class="form-check-label" for="equipCatering"
+                  >Catering Required</label
+                >
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-grid gap-2 mt-5">
+              <button type="submit" class="btn btn-submit btn-lg shadow">
+                Submit Booking Request
+              </button>
+              <a href="../index.html" class="btn btn-outline-secondary"
+                >Cancel</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2024 UniEvents System. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
