@@ -11,18 +11,56 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/signup-login.css" />
   </head>
 
   <body>
-    <div>
-      <form>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">UniEvents</a>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Browse Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html">Host Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact US</a>
+            </li>
+          </ul>
+          <div class="ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm me-2"
+              >Log In</a
+            >
+            <a href="signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="form-container">
+      <form class="p-4 border rounded bg-white shadow-sm">
         <h1>Login</h1>
 
-        <input type="email" placeholder="email address" required />
+        <input type="email" class="rounded" placeholder="email address" required />
 
-        <input type="password" placeholder="password" required />
+        <input type="password" class="rounded" placeholder="password" required />
 
         <div class="remeber-forget my-3">
           <div class="Remember">
