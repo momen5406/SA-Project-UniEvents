@@ -1,70 +1,68 @@
-:root {
-  --primary-color: #0d2c56;
-  /* Navy Blue */
-  --accent-color: #f4a261;
-  /* Soft Orange/Gold */
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-}
-
-.navbar {
-  background-color: var(--primary-color);
-}
-
-.navbar-brand {
-  font-weight: bold;
-  color: white !important;
-}
-
-.nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.nav-link:hover {
-  color: white !important;
-}
-
-.active {
-  color: white !important;
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(rgba(13, 44, 86, 0.8), rgba(13, 44, 86, 0.8)), url('../img/hero.jpg');
+  /* Background image with a dark overlay for text readability */
+  background: linear-gradient(rgba(13, 44, 86, 0.9), rgba(13, 44, 86, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 100px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.role-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
   text-align: center;
-}
-
-.btn-accent {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
   border: none;
 }
 
-.btn-accent:hover {
-  background-color: #e76f51;
+.role-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: background-color 0.3s ease;
+}
+
+.role-card:hover .icon-circle.student-icon {
+  background-color: #cfe2ff;
+}
+
+.role-card:hover .icon-circle.admin-icon {
+  background-color: #f8d7da;
+}
+
+.btn-custom {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title-text {
   color: white;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.event-card {
-  transition: transform 0.3s;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-}
-
-.event-date {
-  color: var(--primary-color);
-  font-weight: bold;
+.title-text h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
 }

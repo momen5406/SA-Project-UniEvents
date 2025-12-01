@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #0d2c56;
+  /* Navy Blue */
+  --accent-color: #f4a261;
+  /* Soft Orange/Gold */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+.active {
+  color: white !important;
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(13, 44, 86, 0.8), rgba(13, 44, 86, 0.8)), url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #e76f51;
+  color: white;
+}
+
+.event-card {
+  transition: transform 0.3s;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-date {
+  color: var(--primary-color);
+  font-weight: bold;
+}
