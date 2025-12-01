@@ -19,6 +19,9 @@ body {
   cursor: pointer;
   height: 100%;
   border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .role-card:hover {
@@ -47,13 +50,13 @@ body {
 }
 
 .btn-custom {
-  margin-top: 20px;
   width: 100%;
   border-radius: 25px;
   padding: 10px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .title-text {
