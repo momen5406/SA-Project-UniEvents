@@ -3,20 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniEvents | Admin Panel</title>
+    <title>UniEvents | Club Admin Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/adminPanel.css" />
+    <link rel="stylesheet" href="../css/clubAdmin.css" />
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum odio alias
-      amet aliquam blanditiis itaque ut et ullam aspernatur maiores culpa saepe
-      illum pariatur hic repellat obcaecati repudiandae, laboriosam fuga!
-    </p>
+    <div class="header">
+      <h1>Event Booking Dashboard</h1>
+      <div class="user-profile">
+        <img
+          src="https://ui-avatars.com/api/?name=Admin+User&background=3498db&color=fff"
+          alt="Admin"
+        />
+        <span>Admin User</span>
+      </div>
+    </div>
+
+    <div class="stats-cards">
+      <div class="card pending">
+        <h3>Pending Requests</h3>
+        <div class="card-value">12</div>
+        <div class="card-change">+2 from last week</div>
+      </div>
+      <div class="card approved">
+        <h3>Approved Requests</h3>
+        <div class="card-value">48</div>
+        <div class="card-change">+8 from last week</div>
+      </div>
+      <div class="card rejected">
+        <h3>Rejected Requests</h3>
+        <div class="card-value">5</div>
+        <div class="card-change">-1 from last week</div>
+      </div>
+      <div class="card total">
+        <h3>Total Requests</h3>
+        <div class="card-value">65</div>
+        <div class="card-change">+9 from last week</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Booking Requests</h2>
+      </div>
+      <div class="table-container">
+        <table class="requests-table">
+          <thead>
+            <tr>
+              <th>Room</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Requested By</th>
+              <th>Attendees</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Conference Room A</td>
+              <td>2023-10-15</td>
+              <td>14:00 - 16:00</td>
+              <td>John Smith</td>
+              <td>25</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <div class="action-buttons">
+                  <button class="btn btn-approve">Approve</button>
+                  <button class="btn btn-reject">Reject</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Training Room B</td>
+              <td>2023-10-16</td>
+              <td>10:00 - 12:00</td>
+              <td>Sarah Johnson</td>
+              <td>18</td>
+              <td><span class="status approved">Approved</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Meeting Room C</td>
+              <td>2023-10-14</td>
+              <td>09:00 - 11:00</td>
+              <td>Mike Williams</td>
+              <td>12</td>
+              <td><span class="status rejected">Rejected</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Event Hall</td>
+              <td>2023-10-20</td>
+              <td>18:00 - 22:00</td>
+              <td>Emma Davis</td>
+              <td>120</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <div class="action-buttons">
+                  <button class="btn btn-approve">Approve</button>
+                  <button class="btn btn-reject">Reject</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Conference Room A</td>
+              <td>2023-10-17</td>
+              <td>13:00 - 15:00</td>
+              <td>Robert Brown</td>
+              <td>30</td>
+              <td><span class="status approved">Approved</span></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Attendee List</h2>
+      </div>
+      <div class="attendees-list">
+        <div class="attendee-card">
+          <div class="attendee-avatar">JS</div>
+          <div class="attendee-info">
+            <h4>John Smith</h4>
+            <p>Event: Annual Meetup</p>
+            <span class="badge paid">Paid</span>
+          </div>
+        </div>
+        <div class="attendee-card">
+          <div class="attendee-avatar">SJ</div>
+          <div class="attendee-info">
+            <h4>Sarah Johnson</h4>
+            <p>Event: Tech Workshop</p>
+            <span class="badge paid">Paid</span>
+          </div>
+        </div>
+        <div class="attendee-card">
+          <div class="attendee-avatar">MW</div>
+          <div class="attendee-info">
+            <h4>Mike Williams</h4>
+            <p>Event: Board Meeting</p>
+            <span class="badge unpaid">Unpaid</span>
+          </div>
+        </div>
+        <div class="attendee-card">
+          <div class="attendee-avatar">ED</div>
+          <div class="attendee-info">
+            <h4>Emma Davis</h4>
+            <p>Event: Annual Meetup</p>
+            <span class="badge paid">Paid</span>
+          </div>
+        </div>
+        <div class="attendee-card">
+          <div class="attendee-avatar">RB</div>
+          <div class="attendee-info">
+            <h4>Robert Brown</h4>
+            <p>Event: Tech Workshop</p>
+            <span class="badge paid">Paid</span>
+          </div>
+        </div>
+        <div class="attendee-card">
+          <div class="attendee-avatar">LT</div>
+          <div class="attendee-info">
+            <h4>Lisa Taylor</h4>
+            <p>Event: Board Meeting</p>
+            <span class="badge unpaid">Unpaid</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
