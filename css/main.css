@@ -34,7 +34,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(13, 44, 86, 0.8), rgba(13, 44, 86, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background: linear-gradient(rgba(13, 44, 86, 0.8), rgba(13, 44, 86, 0.8)), url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
   color: white;
