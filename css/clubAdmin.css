@@ -224,7 +224,7 @@ body {
     gap: 9px;
 }
 
-.btn {
+button {
     padding: 8px 16px;
     border: none;
     border-radius: 6px;
@@ -250,4 +250,23 @@ body {
 
 .btn-reject:hover {
     background-color: #c0392b;
+}
+
+#log {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+#log:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
 }
