@@ -10,25 +10,73 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/contact.css" />
   </head>
   <body>
-    <div class="form-box">
-    <h2>Contact Us</h2>
+   <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">UniEvents</a>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Browse Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html">Host Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact US</a>
+            </li>
+          </ul>
+          <div class="ms-3">
+            <a href="login.html" class="btn btn-outline-light btn-sm me-2"
+              >Log In</a
+            >
+            <a href="signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <label>Name</label>
-    <input type="text" placeholder="Enter your name">
+    <div class="form-container">
+      <div class="form-box">
+        <h2>Contact Us</h2>
 
-    <label>E-mail</label>
-    <input type="email" placeholder="Enter your email">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
 
-    <label>Contact Number</label>
-    <input type="text" placeholder="Enter your number">
+        <label>E-mail</label>
+        <input type="email" placeholder="Enter your email">
 
-    <label>Message</label>
-    <textarea placeholder="Write your message"></textarea>
+        <label>Contact Number</label>
+        <input type="text" placeholder="Enter your number">
 
-    <button>Submit</button>
-</div>
+        <label>Message</label>
+        <textarea placeholder="Write your message"></textarea>
+
+        <button>Submit</button>
+    </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 UniEvents System. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
