@@ -125,10 +125,12 @@ body {
 }
 
 .btn-main:hover {
-  background: #0b2345;
+  background: var(--text-muted);
+  color: #fff;
 }
 
 /* Footer */
 footer {
   margin-top: 50px;
 }
+
