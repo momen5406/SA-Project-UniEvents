@@ -1,4 +1,4 @@
-body {
+.form-container {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #e8f0fe;
@@ -13,7 +13,7 @@ body {
     padding: 25px;
     width: 350px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-box h2 {
