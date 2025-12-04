@@ -1,7 +1,7 @@
 /* Dashboard Specific Styles */
 
 /* Dashboard Header */
-.user-dashboard-header {
+.dashboard-header {
   background: linear-gradient(rgba(13, 44, 86, 0.9), rgba(13, 44, 86, 0.9)),
     url('../img/hero.jpg');
   background-size: cover;
@@ -11,17 +11,17 @@
   text-align: center;
 }
 
-.user-dashboard-header h1 {
+.dashboard-header h1 {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.user-dashboard-header .lead {
+.dashboard-header .lead {
   color: rgba(255, 255, 255, 0.9);
 }
 
 /* Dashboard Card Base Style */
-.white-panel-card {
+.dashboard-card {
   background: #ffffff;
   border-radius: 12px;
   padding: 24px;
@@ -30,23 +30,23 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.white-panel-card:hover {
+.dashboard-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.white-panel-card .panel-heading-title {
+.dashboard-card .card-title {
   color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 /* Profile Card */
-.user-profile-panel {
+.profile-card {
   text-align: center;
 }
 
-.user-avatar-circle {
+.profile-avatar {
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -59,29 +59,29 @@
   font-size: 60px;
 }
 
-.user-info-header h3 {
+.profile-header h3 {
   color: var(--primary-color);
   font-weight: 600;
 }
 
-.user-statistics-row {
+.profile-stats {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
 }
 
-.single-statistic {
+.stat-item {
   text-align: center;
 }
 
-.statistic-number {
+.stat-number {
   font-size: 28px;
   font-weight: 700;
   color: var(--primary-color);
   line-height: 1;
 }
 
-.statistic-description {
+.stat-label {
   font-size: 12px;
   color: var(--text-muted);
   margin-top: 5px;
@@ -90,17 +90,17 @@
 }
 
 /* Quick Actions Card */
-.quick-actions-panel {
+.quick-actions-card {
   margin-top: 24px;
 }
 
-.action-links-container {
+.quick-actions-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.single-action-link {
+.quick-action-item {
   display: flex;
   align-items: center;
   padding: 12px 16px;
@@ -111,31 +111,31 @@
   border: 1px solid transparent;
 }
 
-.single-action-link:hover {
+.quick-action-item:hover {
   background-color: #f8f9fa;
   border-color: var(--primary-color);
   color: var(--primary-color);
   transform: translateX(5px);
 }
 
-.single-action-link i:first-child {
+.quick-action-item i:first-child {
   width: 20px;
   text-align: center;
 }
 
-.single-action-link span {
+.quick-action-item span {
   flex: 1;
   margin-left: 8px;
 }
 
 /* Events List */
-.multiple-events-container {
+.events-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.horizontal-event-card {
+.event-item-card {
   display: flex;
   gap: 16px;
   padding: 16px;
@@ -145,17 +145,17 @@
   background: #ffffff;
 }
 
-.horizontal-event-card:hover {
+.event-item-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-.horizontal-event-card.completed-event {
+.event-item-card.past-event {
   opacity: 0.85;
   background-color: #f8f9fa;
 }
 
-.event-thumbnail-image {
+.event-item-image {
   width: 120px;
   height: 120px;
   min-width: 120px;
@@ -164,26 +164,26 @@
   background: #e9ecef;
 }
 
-.event-thumbnail-image img {
+.event-item-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.event-details-section {
+.event-item-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.event-name-heading {
+.event-item-title {
   color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 16px;
 }
 
-.event-date-time-info {
+.event-item-meta {
   color: var(--text-muted);
   font-size: 14px;
   display: flex;
@@ -191,24 +191,24 @@
   flex-wrap: wrap;
 }
 
-.event-location-text {
+.event-item-location {
   font-size: 13px;
 }
 
-.event-action-buttons {
+.event-item-actions {
   display: flex;
   gap: 8px;
   margin-top: auto;
   padding-top: 12px;
 }
 
-.registration-status-badge {
+.event-status {
   font-size: 11px;
   padding: 4px 8px;
 }
 
 /* Saved Events Grid */
-.bookmarked-event-card {
+.saved-event-card {
   background: #ffffff;
   border: 1px solid #e9ecef;
   border-radius: 10px;
@@ -219,12 +219,12 @@
   flex-direction: column;
 }
 
-.bookmarked-event-card:hover {
+.saved-event-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
 }
 
-.bookmarked-event-image {
+.saved-event-image {
   position: relative;
   width: 100%;
   height: 150px;
@@ -232,13 +232,13 @@
   background: #e9ecef;
 }
 
-.bookmarked-event-image img {
+.saved-event-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.bookmark-toggle-button {
+.saved-event-bookmark {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -256,90 +256,90 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.bookmark-toggle-button:hover {
+.saved-event-bookmark:hover {
   background: white;
   transform: scale(1.1);
   color: var(--primary-color);
 }
 
-.bookmarked-event-content {
+.saved-event-body {
   padding: 16px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.bookmarked-event-title {
+.saved-event-title {
   color: var(--primary-color);
   font-weight: 600;
   font-size: 15px;
   margin: 8px 0;
 }
 
-.bookmarked-event-date {
+.saved-event-meta {
   margin-bottom: 12px;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .user-statistics-row {
+  .profile-stats {
     flex-direction: column;
     gap: 16px;
   }
 
-  .single-statistic {
+  .stat-item {
     padding: 12px 0;
     border-bottom: 1px solid #e9ecef;
   }
 
-  .single-statistic:last-child {
+  .stat-item:last-child {
     border-bottom: none;
   }
 }
 
 @media (max-width: 768px) {
-  .user-dashboard-header {
+  .dashboard-header {
     padding: 40px 0;
   }
 
-  .user-dashboard-header h1 {
+  .dashboard-header h1 {
     font-size: 2rem;
   }
 
-  .horizontal-event-card {
+  .event-item-card {
     flex-direction: column;
   }
 
-  .event-thumbnail-image {
+  .event-item-image {
     width: 100%;
     height: 180px;
   }
 
-  .event-action-buttons {
+  .event-item-actions {
     flex-direction: column;
   }
 
-  .event-action-buttons .btn {
+  .event-item-actions .btn {
     width: 100%;
   }
 
-  .bookmarked-event-card {
+  .saved-event-card {
     margin-bottom: 16px;
   }
 }
 
 @media (max-width: 576px) {
-  .white-panel-card {
+  .dashboard-card {
     padding: 16px;
   }
 
-  .user-avatar-circle {
+  .profile-avatar {
     width: 80px;
     height: 80px;
     font-size: 50px;
   }
 
-  .statistic-number {
+  .stat-number {
     font-size: 24px;
   }
 }
