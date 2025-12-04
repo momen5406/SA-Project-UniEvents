@@ -10,7 +10,86 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/eventDetails.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- NAVIGATION BAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">UniEvents</a>
+
+      <button class="navbar-toggler bg-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-light rounded"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Browse Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Host Event</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact US</a></li>
+        </ul>
+
+        <div class="ms-3">
+          <a href="login.html" class="btn btn-outline-light btn-sm me-2">Log In</a>
+          <a href="signup.html" class="btn btn-accent btn-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header class="hero">
+        <h1>University Club Orientation Day 2025</h1>
+        <p>Welcome to the University Club Orientation! Join us for an exciting day to meet new members, explore club activities, and learn how to get involved on campus.</p>
+    </header>
+
+    <section class="event-container">
+        <aside class="sidebar">
+            <div class="info-box">
+                <h3>📅 Date & Time</h3>
+                <p>Saturday, December 14, 2025 — 10:00 AM – 4:00 PM</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📍 Location</h3>
+                <p>Main Campus Hall, University Building A</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🎙 Speaker</h3>
+                <p>Mohammed Gamal — Senior Product Designer</p>
+            </div>
+
+            <a class="register-btn" href="register.html">Register Now</a>
+        </aside>
+
+        <main class="content">
+            <h2>Description</h2>
+            <p>
+                University Club Orientation Day is designed for new and returning students to:
+                Discover all the activities, workshops, and programs offered by the club.
+                Meet club members, leaders, and coordinators.
+                Participate in interactive sessions and games.
+                Learn how to sign up for future events and volunteer opportunities.
+            </p>
+
+            <h2>Agenda</h2>
+            <ul class="agenda">
+                <li>Welcome Speech & Introduction</li>
+                <li> Club Overview and Activities</li>
+                <li> Icebreaker Games & Networking</li>
+                <li>Q&A Session</li>
+            </ul>
+        </main>
+    </section>
+
+    <!-- FOOTER -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 UniEvents System. All Rights Reserved.</p>
+    </div>
+  </footer>
+  </body>
 </html>
